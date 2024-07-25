@@ -569,7 +569,7 @@ def parse_diff_edit_commands(
         content = (
             "\n".join(content.splitlines()[:start])
             + context_segment
-            + "\n".join(content.splitlines()[end:])
+            + "\n".join(content.splitlines()[end:]).rstrip()
         )
 
     if not replaced:
